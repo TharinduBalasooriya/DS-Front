@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import Item from './singleItem.component'
-
+import Navbar from './navbar.component'
 import axios from 'axios'
 
 const List =  function(props){
@@ -21,7 +21,11 @@ const List =  function(props){
 
     }
     
-    return(<div className="container-sm mt-5">
+    return(
+    <React.Fragment>
+        <Navbar></Navbar>
+
+           <div className="container-sm mt-5">
         <div className="row">
              {
             allItems ?(
@@ -35,6 +39,13 @@ const List =  function(props){
 
         </div>
        
-    </div>);
+    </div>
+
+
+
+    </React.Fragment>
+    
+    
+ );
 }
 export default List

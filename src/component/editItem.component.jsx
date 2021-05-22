@@ -16,12 +16,7 @@ function EditItem(props){
    }
     const [gotData,setTrue] =useState(false);
     const [item, setItem] = useState(intialState);
-    // const[code,setCode] =useState(item.Code);
-    // const[name,setName] = useState(item.Name);
-    // const[quantity,setQuantity] = useState(item.Quantity);
-    // const[price, setPrice] =  useState(item.Price);
-    // const[status ,setStatus] = useState(item.Price);
-    // const[url,setUrl] =  useState(item.ImgUrl);
+   
     useEffect(()=>{
         axios.get('http://localhost:5000/stock-api/items/'+props.match.params.id)
         .then(res=>{
@@ -101,7 +96,7 @@ function EditItem(props){
     axios.put('http://localhost:5000/stock-api/items/'+props.match.params.id,data)
          .then(function (response){
              console.log(response.data)
-             window.location = '/list';
+             window.location = '/itemlist';
          }).catch(function(er){
              console.log(er)
          })

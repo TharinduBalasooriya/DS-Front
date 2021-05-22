@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import axios from 'axios'
 
-
+import Navbar from './navbar.component'
 
 const AddItem = function(props){
     const[code,setCode] =useState("");
@@ -54,7 +54,7 @@ const addIetm = ()=>{
     axios.post('http://localhost:5000/stock-api/items/',data)
          .then(function (response){
              console.log(response.data)
-             window.location = '/';
+             window.location = '/itemlist';
          }).catch(function(er){
              console.log(er)
          })
@@ -64,7 +64,9 @@ const addIetm = ()=>{
 
     return(
 
-        <div className="submit-form m-5" style={{color:"#52ab98"}}>
+        <React.Fragment>
+            <Navbar></Navbar>
+                <div className="submit-form m-5" style={{color:"#52ab98"}}>
             <div className="mb-3">
                 <label htmlFor="itemCode" className="form-label">Item Code</label>
                 <input type="text" className="form-control" id="itemCode"  onChange={handleCode}/>
@@ -102,6 +104,11 @@ const addIetm = ()=>{
             </div>
             
         </div>
+        
+
+
+
+        </React.Fragment>
         
    
 

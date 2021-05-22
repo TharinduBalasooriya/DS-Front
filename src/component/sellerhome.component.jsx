@@ -1,9 +1,12 @@
 import React from "react";
 import { ReactComponent as Homelogo} from '../images/logo.svg';
+import Navbar from './navbar.component'
 
 function Home (){
     return(
+        
         <div className="container-fluid">
+            <Navbar></Navbar>
             <div className="row" style={{height:"60vh"}}>
                 <div className="col-6" style={{ backgroundColor:"#2b6777", color:"white"}} > 
                     <div className="mt-5 text-center">

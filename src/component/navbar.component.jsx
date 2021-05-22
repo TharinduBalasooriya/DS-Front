@@ -6,7 +6,7 @@ const Navbar = function () {
   return (
     <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#ffff"}}>
       <div className="container-fluid" >
-        <Link className="navbar-brand" to="/" style={{color:"#2b6777",fontWeight:"bold",marginRight:"40px"}}>
+        <Link className="navbar-brand" to="/home" style={{color:"#2b6777",fontWeight:"bold",marginRight:"40px"}}>
           Admin dashbaord
         </Link>
         <button
@@ -23,19 +23,19 @@ const Navbar = function () {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/" style={{color:"#2b6777",fontWeight:"bold",marginRight:"40px"}}>
+              <Link className="nav-link active" aria-current="page" to="/sellerhome" style={{color:"#2b6777",fontWeight:"bold",marginRight:"40px"}}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/list" style={{color:"#2b6777",fontWeight:"bold",marginRight:"40px"}}>
+              <Link className="nav-link" to="/itemlist" style={{color:"#2b6777",fontWeight:"bold",marginRight:"40px"}}>
                 All ietms
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/add"
+                to="/additem"
                 tabIndex="-1"
                 aria-disabled="true"
               style={{color:"#2b6777" ,fontWeight:"bold",marginRight:"40px"}}>
